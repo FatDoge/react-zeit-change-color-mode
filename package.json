@@ -1,0 +1,25 @@
+{
+  "name": "localstorage-sync-tabs",
+  "version": "1.0.0",
+  "description": "localstorage sync tabs demo.",
+  "main": "main.js",
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "fatdoge",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@zeit-ui/react": "^0.0.1-beta.27",
+    "pages": "^0.0.16",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

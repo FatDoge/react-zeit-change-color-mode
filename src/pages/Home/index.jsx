@@ -1,0 +1,35 @@
+import React from 'react'
+import { Button, useToasts,Image, Row, Card, Divider, Description  } from '@zeit-ui/react'
+import svg from '../../assets/white-triangle.png'
+import './index.css';
+
+
+const Home = (props) => {
+  const [_, setToast] = useToasts()
+  const click = (e) => {
+    props.handleChangeTheme.switchThemes(e)
+    localStorage.setItem('color-mode',e)
+    setToast({ text: 'Change color mode.' })
+  }
+  return <>
+  <Row>
+    <Card>
+      <Image width="540" height="246" src={svg} />
+    </Card>
+</Row>
+<Row align="center" justify="center">
+  <div className="description">
+    <Description title="Sync change" content={<>Open Multiple tabs and change color mode below...</>} />
+  </div>
+</Row>
+<Row align="center" justify="center">
+  <div className="bottom-group">
+    <Button onClick={() => click('light')}>Light</Button>
+      <Divider>{props.theme.themeType}</Divider>
+    <Button onClick={() => click('dark')}>Dark</Button>
+  </div>
+</Row>
+    </>
+}
+
+export default Home;
