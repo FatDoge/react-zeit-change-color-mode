@@ -1,8 +1,8 @@
 .modetag {
   display: flex;
   position: fixed;
-  bottom: 50px;
-  left: 50px;
+  bottom: 2rem;
+  left: 2rem;
   font-size: 45px;
   z-index: 1;
   transition: .3s;
