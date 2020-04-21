@@ -16,6 +16,7 @@ const Home = (props) => {
   <Row>
     <div className="header">
       @ZEIT-UI/<a href="https://github.com/zeit-ui/react" target="_blank">React</a>🎈
+      @ZEIT/<a href="https://github.com/zeit/now" target="_blank">Now</a>🎉
     </div>
   </Row>
   <Row>
@@ -29,7 +30,7 @@ const Home = (props) => {
 <Row align="center" justify="center">
   <div className="bottom-group">
     <Button onClick={() => click('light')}>Light</Button>
-      <Divider>{props.theme.themeType}</Divider>
+      <Divider>{props.theme.themeType === 'dark' ? '🌑' : '🌕'}</Divider>
     <Button onClick={() => click('dark')}>Dark</Button>
   </div>
 </Row>
