@@ -5,9 +5,7 @@ import './index.css';
 export default class Footer extends Component {
   render() {
     return <Row>
-      <Card>
-      <div className="footer">CODE BY FATDOGE & ZEIT-UI-REACT</div>
-      </Card>
+      <div className="footer">Code&nbsp;by&nbsp;<a href="https://github.com/fatdoge" target="_blank">Fatdoge</a>&nbsp;🦄</div>
       </Row>
   }
 }

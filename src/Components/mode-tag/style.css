@@ -3,7 +3,14 @@
   position: fixed;
   bottom: 50px;
   left: 50px;
-  font-size: 50px;
+  font-size: 45px;
   z-index: 1;
-  transition: .3s ease-in-out;
+  transition: .3s;
+  cursor: pointer;
+  opacity: .8;
+}
+
+.modetag:hover {
+  opacity: 1;
+  font-size:51px;
 }

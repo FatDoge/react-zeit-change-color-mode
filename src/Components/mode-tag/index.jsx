@@ -2,7 +2,11 @@ import React from 'react';
 import './style.css'
 
 const ModeTag = (props) => {
-  return <div className='modetag'>
+  const handleClick = e => {
+    props.onSubmit(e === 'dark' ? 'light' : 'dark')
+  }
+
+  return <div className='modetag' onClick={() => handleClick(props.colorMode)}>
     {props.colorMode === 'dark' ? '🌑' : '🌕'}
   </div>
 }

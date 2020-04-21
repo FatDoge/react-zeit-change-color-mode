@@ -14,9 +14,12 @@ const Home = (props) => {
   }
   return <>
   <Row>
-    <Card>
+    <div className="header">
+      @ZEIT-UI/<a href="https://github.com/zeit-ui/react" target="_blank">React</a>🎈
+    </div>
+  </Row>
+  <Row>
       <Image width="540" height="246" src={svg} />
-    </Card>
 </Row>
 <Row align="center" justify="center">
   <div className="description">
@@ -30,7 +33,7 @@ const Home = (props) => {
     <Button onClick={() => click('dark')}>Dark</Button>
   </div>
 </Row>
-<ModeTag colorMode={props.theme.themeType}/>
+<ModeTag colorMode={props.theme.themeType} onSubmit={click}/>
     </>
 }
 
