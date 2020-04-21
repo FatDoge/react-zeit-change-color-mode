@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, useToasts,Image, Row, Card, Divider, Description  } from '@zeit-ui/react'
 import svg from '../../assets/white-triangle.png'
 import './index.css';
+import ModeTag from '../../Components/mode-tag'
 
 
 const Home = (props) => {
@@ -29,6 +30,7 @@ const Home = (props) => {
     <Button onClick={() => click('dark')}>Dark</Button>
   </div>
 </Row>
+<ModeTag colorMode={props.theme.themeType}/>
     </>
 }
 
