@@ -1,9 +1,9 @@
 .modetag {
   display: flex;
   position: fixed;
-  bottom: 2rem;
-  left: 2rem;
-  font-size: 45px;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 40px;
   z-index: 1;
   transition: .3s;
   cursor: pointer;
