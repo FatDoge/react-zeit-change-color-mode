@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactAplayer from 'react-aplayer';
 import { fetchLrc, fetchMusicDetail, playlistDetail } from '../../services/aplayer'
-import { renderMusicSrc } from '../../utils'
+import { renderMusicSrc, oneLevelObjectCombine } from '../../utils'
 import './style.css'
 
 export default class App extends React.Component {
@@ -19,7 +19,9 @@ export default class App extends React.Component {
   renderMusicList = async () => {
     const { playlistId } = this.state;
     const { playlist: { trackIds } } = await playlistDetail(playlistId);
-    let ids, musicList=[],promiseList=[];
+    let ids;
+    let musicList=[];
+    let promiseList=[];
     if(trackIds.length) {
       ids = trackIds.map( e => e.id)
       promiseList = trackIds.map( e => fetchLrc(e.id))
@@ -35,10 +37,6 @@ export default class App extends React.Component {
         url: renderMusicSrc(e.id),
         cover: e.al&&e.al.picUrl,
         artist: e.al&&e.al.name
-      }))
-      .map( i => ({
-        ...i,
-        lrc: '[00:00.00]'
       }))
       
     }
