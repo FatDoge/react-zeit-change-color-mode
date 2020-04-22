@@ -13,10 +13,11 @@
   "dependencies": {
     "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
     "@zeit-ui/react": "^0.0.1-beta.27",
-    "babel-plugin-transform-runtime": "^6.23.0",
+    "axios": "^0.19.2",
     "babel-preset-es2015": "^6.24.1",
     "pages": "^0.0.16",
     "react": "^16.13.1",
