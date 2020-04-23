@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 import { Tabs, Row } from '@zeit-ui/react'
 import './style.css'
 
-const NavBar = () => (
+const NavBar = () => {
+  return (
   <Row>
-  <Tabs initialValue="1" className="navbar">
-  <Tabs.Item label={<Link to="/" className="link">Home</Link>} value="1">
+  <Tabs initialValue={window.location.pathname} className="navbar">
+  <Tabs.Item label={<Link to="/" className="link">HOME</Link>} value="/">
   </Tabs.Item>
-  <Tabs.Item label={<Link to="/about" className="link">About</Link>} value="2">
+  <Tabs.Item label={<Link to="/about" className="link">ABOUT</Link>} value="/about">
   </Tabs.Item>
 </Tabs>
 </Row>
-)
+)}
 
 export default NavBar;
