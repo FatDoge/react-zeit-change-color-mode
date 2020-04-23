@@ -7,6 +7,7 @@ import {
   Divider,
   Description,
 } from "@zeit-ui/react";
+import { TiWeatherSunny,TiWeatherNight } from "react-icons/ti";
 import svg from "../../assets/white-triangle.png";
 import "./index.css";
 
@@ -45,9 +46,9 @@ const Home = (props) => {
       </Row>
       <Row align="center" justify="center">
         <div className="bottom-group">
-          <Button onClick={() => click("light")}>Light</Button>
-          <Divider>{props.theme.themeType === "dark" ? "🌑" : "🌕"}</Divider>
-          <Button onClick={() => click("dark")}>Dark</Button>
+          <Button onClick={() => click("light")}><TiWeatherSunny/>Light</Button>
+          <Divider>{props.theme.themeType === "dark" ? <TiWeatherNight/> : <TiWeatherSunny/> }</Divider>
+          <Button onClick={() => click("dark")}><TiWeatherNight/>Dark</Button>
         </div>
       </Row>
     </>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css'
+import { TiWeatherSunny,TiWeatherNight } from "react-icons/ti";
 
 const ModeTag = (props) => {
   const handleClick = e => {
@@ -7,7 +8,7 @@ const ModeTag = (props) => {
   }
 
   return <div className='modetag' onClick={() => handleClick(props.colorMode)}>
-    {props.colorMode === 'dark' ? '🌑' : '🌕'}
+    {props.colorMode === 'dark' ? <TiWeatherNight/> : <TiWeatherSunny/>}
   </div>
 }
 
